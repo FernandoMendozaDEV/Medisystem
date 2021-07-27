@@ -1,1 +1,457 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+.card-container{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background: #fff;
+    border-radius: 20px;
+    transition: .6s;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, .2);
+}
+
+.card-container:hover{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background: #fff;
+    border-radius: 20px;
+    transition: .6s;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, .6);
+
+}
+
+.header{
+    border-right: 1px solid #ddd;
+}
+
+.descripcion{
+    background: #fbfbfb;
+}
+
+.header, .descripcion{
+    padding: 20px;
+    text-align: center;
+}
+
+.header a{
+    position: relative;
+    display: block;
+}
+
+.header img{
+    border-radius: 100px;
+    box-shadow: 0 0 0 8px rgba(0,0,0,.06);
+    margin: 20px 5px;
+    transition: .2s;
+}
+
+
+.header h2{
+    color: #007bff;
+}
+
+.header h4{
+    margin-bottom: 20px;
+}
+
+.descripcion{
+    position: relative;
+}
+
+.descripcion p{
+    margin: 20px 30px;
+}
+
+.descripcion .social{
+    margin-top: 25px;
+}
+
+.header .social{
+    margin-top: 25px;
+}
+
+.header .social a{
+    display: inline-block;
+    padding: 0 15px;
+    color: #007bff;
+    font-size: 23px;
+}
+
+.descripcion .social a{
+    display: inline-block;
+    padding: 0 15px;
+    color: #007bff;
+}
+
+@media (max-width:640px){
+    .card-container{
+        display: block;
+        width: 450px;
+    }
+
+    .header{
+        padding: 20px 20px 5px 20px;
+        border: none;
+    }
+
+    .descripcion{
+        padding: 50px 20px 20px 20px;
+        background: transparent;
+    }
+
+    .header h4{
+        margin: 0;
+    }
+}
+
+
+.slider{
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 2s;
+  }
+  
+  .slide img{
+    width: 800px;
+    height: 500px;
+  }
+  
+  /*css for manual slide navigation*/
+  
+  .navigation-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btn{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background: #40D3DC;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  /*css for automatic navigation*/
+  
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+  }
+  
+  .navigation-auto div{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #40D3DC;
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #40D3DC;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #40D3DC;
+  }
+  
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #40D3DC;
+  }
+     
+  
+
+
+.cuerpo{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+  .container-cards{
+      width: 1000px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .container-cards .card-card{
+      position: relative;
+  }
+
+  .container-cards .card-card .face{
+      width: 300px;
+      height: 200px;
+      transition: 0.5s;
+  }
+
+  .container-cards .card-card .face.face1{
+    position: relative;
+    background: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1 ;
+    transform: translateY(100px);
+}
+
+.container-cards .card-card:hover .face.face1{
+    transform: translateY(0);
+    background: #007bff;
+}
+
+.container-cards .card-card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgb(0,0,0,0.8);
+    transform: translateY(-100px);
+}
+
+.container-cards .card-card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container-cards .card-card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.container-cards .card-card .face.face2 .content a{
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container-cards .card-card .face.face2 .content a:hover{
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container-cards .card-card .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.container-cards .card-card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.container-cards .card-card .face.face1 .content img{
+    max-width: 100px;
+}
+
+.container-cards .card-card .face.face1 .content i{
+    color: #fff;
+}
+
+.container-cards .card-card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+.cuerpo-c{
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  background: #fbfbfb;
+}
+
+
+
+.container-b{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+
+.container-b .box{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 30px;
+  background: #fff;
+  box-shadow: 0px 30px 50px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.container-b .box .imgBx{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  transform: scale(1) translateY(0);
+}
+
+.container-b .box:hover .imgBx{
+  transform: scale(1) translateY(-100%);
+}
+
+
+.container-b .box .imgBx img{
+  max-width: 100px;
+}
+
+.container-b .box .contenido{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.5s;
+  background: #007bff;
+  transform: scale(1) translateY(calc(100% - 5px));
+}
+
+.container-b .box:hover .contenido{
+  transform: scale(1);
+}
+
+.container-b .box:nth-child(2) .contenido{
+  background: #2ba1ff;
+}
+
+.container-b .box:nth-child(3) .contenido{
+  background: #c630e0;
+}
+
+.container-b .box .contenido .icon img{
+  max-width: 80px;
+  filter: invert(1);
+}
+
+.container-b .box .contenido h3{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+.container-b .box .contenido h4{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (max-width:640px){
+  .cuerpo-c{
+      display: block;
+      width: auto;
+  }
+
+  .container-b{
+    margin-top:25px;
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    justify-content: center;
+  }
+
+  
+  
+}
+
+
