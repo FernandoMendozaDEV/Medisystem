@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth-routing.module').then( m => m.AuthRoutingModule )
   },
   {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin-routing.module').then( m => m.AdminRoutingModule )
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }

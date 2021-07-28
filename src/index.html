@@ -23,8 +23,10 @@
    <!--====== Style css ======-->
    <link rel="stylesheet" href="assets/css/style.css">
 
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body class="mat-typography">
   
   <!--====== jquery js ======-->
   <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
@@ -54,6 +56,14 @@
       }
     }, 5000);
     </script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.nav_btn').click(function(){
+      $('.mobile_nav_items').toggleClass('active');
+    });
+  });
+  </script>
 
 
   <app-root></app-root>
