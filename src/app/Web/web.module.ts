@@ -11,6 +11,7 @@ import { HomeSectionComponent } from './components/home-section/home-section.com
 import { QuienesSomosComponent } from './components/quienes-somos/quienes-somos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
+import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { NoticiasComponent } from './components/noticias/noticias.component';
     HomeSectionComponent,
     QuienesSomosComponent,
     FooterComponent,
-    NoticiasComponent
+    NoticiasComponent,
+    CatalogoComponent
   ],
   imports: [
     CommonModule,
