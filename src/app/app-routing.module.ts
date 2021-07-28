@@ -8,6 +8,10 @@ const routes: Routes = [
     loadChildren: () => import('./Web/web-routing.module').then( m => m.WebRoutingModule )
   },
   {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth-routing.module').then( m => m.AuthRoutingModule )
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }
